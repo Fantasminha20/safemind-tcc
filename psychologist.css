@@ -1,0 +1,263 @@
+.pro-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 32px 0;
+}
+.pro-metrics > div {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid var(--brand-line);
+  border-radius: 12px;
+  background: var(--brand-surface);
+}
+.pro-metrics span {
+  font-size: 12px;
+  color: var(--brand-muted);
+}
+.pro-metrics strong {
+  font-weight: 500;
+  font-size: 25px;
+  margin: 12px 0;
+  color: var(--brand-text);
+}
+.pro-metrics small {
+  font-size: 10px;
+  color: var(--brand-muted);
+}
+.pro-green {
+  color: var(--brand-green);
+}
+.pro-gold {
+  color: var(--brand-gold);
+}
+.pro-pink {
+  color: var(--brand-pink);
+}
+.pro-lead {
+  font-size: 14px;
+  color: var(--brand-muted);
+  line-height: 1.8;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+.pro-editor-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+.pro-panel-card {
+  background: var(--brand-surface);
+  border: 1px solid var(--brand-line);
+  border-radius: 14px;
+  padding: 28px;
+}
+form.pro-panel-card {
+  display: grid;
+  gap: 14px;
+}
+.pro-panel-card h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+.pro-panel-card label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--brand-text);
+}
+.pro-panel-card input,
+.pro-panel-card select,
+.pro-panel-card textarea,
+.agenda-toolbar select {
+  width: 100%;
+  background: var(--brand-soft);
+  border: 1px solid var(--brand-line);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--brand-text);
+  font:
+    14px/1.5 Arial,
+    sans-serif;
+  min-width: 0;
+}
+.pro-panel-card textarea {
+  resize: vertical;
+}
+.pro-panel-card input::placeholder,
+.pro-panel-card textarea::placeholder {
+  color: var(--brand-muted);
+}
+.pro-panel-card small,
+.pro-help {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--brand-muted);
+}
+.pro-panel-card button {
+  justify-self: start;
+}
+.pro-panel-card [role="status"] {
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+.pro-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.pro-field-grid > div {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.profile-preview {
+  border-top: 3px solid var(--brand-green);
+  overflow-wrap: anywhere;
+}
+#preview-initials {
+  background: color-mix(in srgb, var(--brand-green) 12%, transparent);
+  color: var(--brand-green);
+  display: grid;
+  place-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  font:
+    36px Georgia,
+    serif;
+  margin: 30px 0;
+}
+#preview-specialty {
+  font-size: 14px;
+  color: var(--brand-green);
+}
+#preview-crp {
+  font-size: 11px;
+  color: var(--brand-muted);
+}
+#preview-bio {
+  white-space: pre-wrap;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--brand-muted);
+}
+.draft-badge {
+  display: inline-block;
+  font-size: 10px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: var(--brand-soft);
+  color: var(--brand-muted);
+}
+.availability-row {
+  display: grid;
+  grid-template-columns: 1fr 130px 130px;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--brand-line);
+}
+.availability-row > label:not(.day-checkbox) {
+  display: grid;
+  gap: 8px;
+}
+.day-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.pro-panel-card .day-checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--brand-gold);
+}
+.availability-row input:disabled {
+  opacity: 0.4;
+}
+.agenda-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.agenda-toolbar h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.agenda-toolbar select {
+  width: auto;
+  font-size: 12px;
+}
+#appointments {
+  display: grid;
+  gap: 14px;
+}
+.appointment-card {
+  border: 1px solid var(--brand-line);
+  border-left: 3px solid var(--brand-pink);
+  background: var(--brand-surface);
+  border-radius: 10px;
+  padding: 22px;
+  overflow-wrap: anywhere;
+}
+.appointment-card h3 {
+  font-size: 17px;
+  font-weight: 500;
+}
+.appointment-meta {
+  font-size: 11px;
+  color: var(--brand-muted);
+}
+.psychologist-page .journal-link {
+  background: none;
+  border: 0;
+  color: var(--brand-pink);
+  font-size: 12px;
+  padding: 8px 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.agenda-empty h3 {
+  font-size: 17px;
+  font-weight: 500;
+}
+.agenda-empty p {
+  color: var(--brand-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.psychologist-page [hidden] {
+  display: none !important;
+}
+@media (max-width: 1100px) {
+  .pro-editor-layout {
+    grid-template-columns: 1fr;
+  }
+  .pro-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .pro-panel-card {
+    padding: 20px;
+  }
+  .pro-field-grid {
+    grid-template-columns: 1fr;
+  }
+  .availability-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .availability-row .day-checkbox {
+    grid-column: 1/-1;
+  }
+  .agenda-toolbar {
+    flex-wrap: wrap;
+  }
+}

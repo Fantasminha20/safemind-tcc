@@ -1,0 +1,160 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #f8f9f9;
+}
+.home-note {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #686f76;
+  padding: 30px 15px 0;
+}
+.hero {
+  padding-bottom: 80px;
+}
+.hero__wave {
+  display: none;
+}
+.care-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+.care-section h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  letter-spacing: -2px;
+  line-height: 1.15;
+  max-width: 700px;
+  margin: 18px 0;
+}
+.care-section > p {
+  color: #6a7177;
+  margin-bottom: 32px;
+}
+.kicker {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #6b7278;
+}
+#journal {
+  display: grid;
+  gap: 13px;
+  background: #eff0f0;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 740px;
+}
+#journal textarea,
+#journal select {
+  font: inherit;
+  border: 1px solid #cfd2d4;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+}
+#journal small {
+  color: #646a71;
+}
+#journal button {
+  justify-self: start;
+}
+#entries p {
+  padding: 20px;
+  border-bottom: 1px solid #dee0e1;
+  white-space: pre-wrap;
+}
+#clear-journal {
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  padding: 15px 0;
+  color: #60666c;
+}
+.people {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.person {
+  border: 1px solid #d6d9db;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s;
+}
+.person:hover,
+.person:focus-within {
+  transform: translateY(-14px);
+  box-shadow: 0 22px 45px #2f343820;
+}
+.portrait {
+  height: 240px;
+  background: radial-gradient(ellipse at 50% 100%, #5e656b, transparent 65%), #dee0e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.portrait span {
+  font-family: Georgia;
+  font-size: 88px;
+  color: #ffffffaa;
+}
+.portrait small {
+  position: absolute;
+  bottom: 20px;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+.portrait-1 {
+  background: radial-gradient(ellipse at 50% 100%, #858975, transparent 65%), #e5e5db;
+}
+.portrait-2 {
+  background: radial-gradient(ellipse at 50% 100%, #80888f, transparent 65%), #e4e5e7;
+}
+.person-copy {
+  padding: 25px;
+}
+.person h3 {
+  font-size: 22px;
+  margin: 12px 0;
+}
+.person p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666c72;
+}
+.person summary {
+  cursor: pointer;
+  padding-top: 20px;
+}
+.person:hover details:not([open]) summary {
+  color: #5d6369;
+}
+.person a {
+  color: #5d6369;
+}
+.person details {
+  margin-top: 12px;
+}
+@media (max-width: 700px) {
+  .people {
+    grid-template-columns: 1fr;
+  }
+  .care-section {
+    padding: 50px 20px;
+  }
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

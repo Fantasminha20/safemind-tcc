@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Configurações — Safemind</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="refinement.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="brand-sections.css" />
+    <link rel="stylesheet" href="access.css" />
+    <link rel="stylesheet" href="password-ui.css" />
+    <link rel="stylesheet" href="settings.css" />
+    <script src="theme.js"></script>
+    <script>
+      document.documentElement.classList.add("auth-pending");
+      setTimeout(function () {
+        if (document.documentElement.classList.contains("auth-pending"))
+          location.replace("login.html?next=configuracoes.html");
+      }, 12000);
+    </script>
+      <link rel="stylesheet" href="motion.css" />
+    <script src="motion.js"></script>
+  </head>
+  <body class="settings-page">
+    <header class="settings-header">
+      <a class="logo" href="boas-vindas.html"
+        ><img class="brand-image" src="brand-light.svg" alt="Safemind"
+      /></a>
+      <div class="header-actions">
+        <a class="btn btn--outline btn--sm" id="back-link" href="paciente.html">← Voltar</a>
+      </div>
+    </header>
+
+    <main class="settings-main" id="settings-app" hidden>
+      <h1 id="settings-title" tabindex="-1">Configurações</h1>
+      <p class="settings-lead">Gerencie sua conta, seus dados e sua privacidade.</p>
+
+      <section class="settings-card" aria-labelledby="account-title">
+        <h2 id="account-title">Conta</h2>
+        <form id="name-form" class="settings-form">
+          <label for="account-name">Nome</label>
+          <input id="account-name" name="name" minlength="2" maxlength="120" autocomplete="name" required />
+          <label for="account-email">E-mail</label>
+          <input id="account-email" readonly />
+          <p class="settings-meta" id="account-meta"></p>
+          <button class="btn btn--dark btn--sm" type="submit">Salvar nome</button>
+          <p class="settings-status" id="name-status" role="status"></p>
+        </form>
+      </section>
+
+      <section class="settings-card" id="password-section" aria-labelledby="password-title" hidden>
+        <h2 id="password-title">Alterar senha</h2>
+        <form id="password-form" class="settings-form">
+          <label for="current-password">Senha atual</label>
+          <input id="current-password" type="password" autocomplete="current-password" required />
+          <label for="new-password">Nova senha</label>
+          <input id="new-password" type="password" autocomplete="new-password" minlength="8" maxlength="128" data-strength required />
+          <label for="confirm-password">Confirmar nova senha</label>
+          <input id="confirm-password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
+          <button class="btn btn--dark btn--sm" type="submit">Alterar senha</button>
+          <p class="settings-status" id="password-status" role="status"></p>
+        </form>
+      </section>
+
+      <section class="settings-card" id="patient-section" aria-labelledby="patient-title" hidden>
+        <h2 id="patient-title">Suas preferências</h2>
+        <label class="settings-switch" for="diary-toggle">
+          <input id="diary-toggle" type="checkbox" />
+          <span>Usar o diário emocional</span>
+        </label>
+        <p class="settings-hint">
+          Desligar o diário só o esconde: os registros continuam guardados na sua conta.
+        </p>
+        <p class="settings-status" id="diary-status" role="status"></p>
+        <p><a href="index.html?revisar=1">Refazer o questionário inicial</a></p>
+      </section>
+
+      <section class="settings-card" id="professional-section" aria-labelledby="professional-title" hidden>
+        <h2 id="professional-title">Perfil profissional</h2>
+        <p class="settings-meta" id="professional-meta"></p>
+        <p><a href="psicologo.html#perfil">Editar perfil, região e apresentação</a></p>
+        <p><a href="onboarding-profissional.html">Responder ou revisar o questionário profissional</a></p>
+      </section>
+
+      <section class="settings-card" aria-labelledby="data-title">
+        <h2 id="data-title">Meus dados</h2>
+        <p>
+          Baixe uma cópia dos dados da sua conta (perfil, preferências, diário e, para
+          psicólogos, perfil profissional e agenda) em um arquivo JSON.
+        </p>
+        <button class="btn btn--outline btn--sm" id="export-button" type="button">Baixar meus dados</button>
+        <p class="settings-status" id="export-status" role="status"></p>
+      </section>
+
+      <section class="settings-card settings-card--danger" aria-labelledby="danger-title">
+        <h2 id="danger-title">Apagar conta</h2>
+        <p>
+          Apaga de forma definitiva o seu acesso e todos os dados da conta: perfil, preferências,
+          diário e, para psicólogos, perfil, questionário e agenda. <strong>Não há como desfazer.</strong>
+        </p>
+        <button class="btn btn--outline btn--sm settings-danger-button" id="delete-open" type="button" aria-expanded="false" aria-controls="delete-form">
+          Quero apagar minha conta
+        </button>
+        <form id="delete-form" class="settings-form" hidden>
+          <label for="delete-confirm">Para confirmar, digite <strong>APAGAR</strong></label>
+          <input id="delete-confirm" autocomplete="off" />
+          <div id="delete-password-wrap" hidden>
+            <label for="delete-password">Sua senha atual</label>
+            <input id="delete-password" type="password" autocomplete="current-password" />
+          </div>
+          <p class="settings-hint" id="delete-hint"></p>
+          <div class="settings-actions">
+            <button class="btn btn--dark btn--sm settings-danger-button" id="delete-submit" type="submit" disabled>
+              Apagar minha conta definitivamente
+            </button>
+            <button class="btn btn--outline btn--sm" id="delete-cancel" type="button">Cancelar</button>
+          </div>
+          <p class="settings-status" id="delete-status" role="alert"></p>
+        </form>
+      </section>
+
+      <p><button class="btn btn--outline btn--sm" id="settings-logout" type="button">Sair da conta</button></p>
+    </main>
+
+    <script type="module" src="password-ui.js"></script>
+    <script type="module" src="settings.js"></script>
+  </body>
+</html>

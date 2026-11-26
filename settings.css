@@ -1,0 +1,114 @@
+.settings-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+.settings-header .logo img {
+  height: 2.2rem;
+}
+.settings-header .header-actions {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+}
+.settings-main {
+  margin: 0 auto;
+  max-width: 44rem;
+  padding: 1rem 1.25rem 4rem;
+}
+.settings-main h1 {
+  margin-bottom: 0.3rem;
+}
+.settings-lead {
+  color: var(--muted, #55524f);
+  margin: 0 0 1.5rem;
+}
+.settings-card {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--line, #ddd);
+  border-radius: 1rem;
+  margin-bottom: 1.2rem;
+  padding: 1.3rem 1.4rem;
+}
+.settings-card[hidden] {
+  display: none;
+}
+.settings-card h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.8rem;
+}
+.settings-card p {
+  line-height: 1.55;
+  margin: 0 0 0.8rem;
+}
+.settings-form label {
+  color: var(--muted, #55524f);
+  display: block;
+  font-size: 0.88rem;
+  margin: 0.8rem 0 0.3rem;
+}
+.settings-form input {
+  background: transparent;
+  border: 1px solid var(--line, #bbb);
+  border-radius: 0.6rem;
+  color: var(--ink, #222);
+  font: inherit;
+  padding: 0.65rem 0.8rem;
+  width: 100%;
+}
+.settings-form input[readonly] {
+  opacity: 0.7;
+}
+.settings-form button[type="submit"] {
+  margin-top: 1rem;
+}
+.settings-meta,
+.settings-hint {
+  color: var(--muted, #55524f);
+  font-size: 0.9rem;
+}
+.settings-status {
+  font-size: 0.92rem;
+  margin: 0.7rem 0 0;
+  min-height: 1.2em;
+}
+.settings-status--error {
+  color: #b3261e;
+}
+.settings-switch {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 0.4rem;
+}
+.settings-switch input {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.settings-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.settings-actions button {
+  margin-top: 0 !important;
+}
+.settings-card--danger {
+  border-color: #b3261e;
+}
+.settings-card--danger h2 {
+  color: #b3261e;
+}
+.settings-danger-button {
+  border-color: #b3261e !important;
+}
+.settings-danger-button:disabled {
+  opacity: 0.5;
+}
+html[data-theme="dark"] .settings-card--danger h2,
+html[data-theme="dark"] .settings-status--error {
+  color: #ff8a80;
+}

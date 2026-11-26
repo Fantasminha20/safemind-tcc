@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Área do paciente — Safemind</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="experience.css" />
+    <link rel="stylesheet" href="refinement.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="journal.css" />
+    <link rel="stylesheet" href="brand-sections.css" />
+    <link rel="stylesheet" href="patient.css" />
+    <style>
+      .auth-pending { visibility: hidden; }
+    </style>
+    <script>
+      document.documentElement.classList.add("auth-pending");
+      setTimeout(function () {
+        if (document.documentElement.classList.contains("auth-pending"))
+          location.replace("login.html?next=paciente.html");
+      }, 12000);
+    </script>
+    <script type="module" src="patient-access.js"></script>
+    <script src="theme.js"></script>
+    <script type="module" src="patient.js"></script>
+    <script type="module" src="experience.js"></script>
+      <link rel="stylesheet" href="motion.css" />
+    <script src="motion.js"></script>
+  </head>
+  <body class="patient-page">
+    <div class="patient-shell">
+      <aside class="patient-sidebar">
+        <a class="logo" href="boas-vindas.html"
+          ><img class="brand-image" src="brand-light.svg" alt="Safemind"
+        /></a>
+        <p class="sidebar-label">Área do paciente</p>
+        <nav aria-label="Área do paciente">
+          <a href="#inicio" class="patient-nav-link nav-blue" data-panel="inicio"
+            ><span class="nav-icon"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" /></svg></span
+            ><span>Visão geral</span></a
+          ><a
+            href="#profissionais"
+            class="patient-nav-link nav-green"
+            data-panel="profissionais"
+            ><span class="nav-icon"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"
+              >
+                <circle cx="9" cy="8" r="3" />
+                <path
+                  d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a4 4 0 0 1 0 8M18 15a5 5 0 0 1 3 4v2"
+                /></svg></span
+            ><span>Profissionais</span></a
+          ><a href="#diario" class="patient-nav-link nav-pink" data-panel="diario"
+            ><span class="nav-icon"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 3h13a2 2 0 0 1 2 2v16H6a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2M3 17h16M8 7h7M8 11h5"
+                /></svg></span
+            ><span>Diário emocional<small>Opcional</small></span></a
+          ><a
+            href="#preferencias"
+            class="patient-nav-link nav-gold"
+            data-panel="preferencias"
+            ><span class="nav-icon"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"
+              >
+                <path d="M4 7h16M4 17h16" />
+                <circle cx="9" cy="7" r="3" />
+                <circle cx="16" cy="17" r="3" /></svg></span
+            ><span>Preferências</span></a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <a href="boas-vindas.html">← Voltar ao site</a
+          ><span>Uma criação da Mentis</span>
+        </div>
+      </aside>
+      <div class="patient-workspace">
+        <header class="patient-topbar">
+          <div>
+            <span class="kicker">Seu espaço pessoal</span>
+            <p id="panel-label">Visão geral</p>
+          </div>
+          <div class="header-actions"></div>
+        </header>
+        <main class="patient-main">
+          <section
+            id="panel-inicio"
+            data-patient-panel="inicio"
+            aria-labelledby="dashboard-title"
+          >
+            <div class="dashboard-heading">
+              <span class="kicker">Bem-vindo à sua área</span>
+              <h1 id="dashboard-title" tabindex="-1">
+                Cuidar de você.<br /><em>Uma coisa de cada vez.</em>
+              </h1>
+              <p>Escolha por onde começar. Este espaço acompanha o seu ritmo.</p>
+            </div>
+            <div class="patient-tiles">
+              <a class="patient-tile tile-green" href="#profissionais"
+                ><span class="tile-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    aria-hidden="true"
+                  >
+                    <circle cx="9" cy="8" r="3" />
+                    <path
+                      d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a4 4 0 0 1 0 8M18 15a5 5 0 0 1 3 4v2"
+                    /></svg></span
+                ><span>Encontre sua conexão</span>
+                <h2>Profissionais</h2>
+                <p>Explore os perfis e conheça possibilidades de acompanhamento.</p>
+                <b>Explorar perfis ↗</b></a
+              ><a class="patient-tile tile-pink" href="#diario"
+                ><span class="tile-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 3h13a2 2 0 0 1 2 2v16H6a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2M3 17h16M8 7h7M8 11h5"
+                    /></svg></span
+                ><span>Uma pausa para se escutar</span>
+                <h2>Diário emocional</h2>
+                <p>
+                  Registre suas emoções quando fizer sentido. Usar o diário é uma escolha
+                  sua.
+                </p>
+                <b id="diary-tile-action">Conhecer o diário ↗</b></a
+              ><a class="patient-tile tile-gold" href="#preferencias"
+                ><span class="tile-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 7h16M4 17h16" />
+                    <circle cx="9" cy="7" r="3" />
+                    <circle cx="16" cy="17" r="3" /></svg></span
+                ><span>Do seu jeito</span>
+                <h2>Suas preferências</h2>
+                <p>Revisite suas respostas sobre terapia, formato e disponibilidade.</p>
+                <b>Ver preferências ↗</b></a
+              >
+            </div>
+            <div class="patient-local-note">
+              <strong>Este espaço está neste navegador.</strong>
+              <p>
+                Seus registros ficam neste navegador e as respostas do quiz ficam nesta
+                sessão. Use seu próprio dispositivo e baixe os registros que quiser
+                guardar.
+              </p>
+            </div>
+          </section>
+          <section id="panel-profissionais" data-patient-panel="profissionais" hidden>
+            <section class="care-section" id="patient-professionals">
+              <span class="kicker">Conexões que acolhem</span>
+              <h2>Encontre espaço para ser você.</h2>
+              <p>
+                Explore os perfis. Passe o cursor, use o teclado ou toque para conhecer
+                mais.
+              </p>
+              <form class="pro-filters" id="professional-filters" hidden>
+                <label>
+                  Estado
+                  <select id="filter-state"><option value="">Todos</option></select>
+                </label>
+                <label>
+                  Cidade
+                  <input id="filter-city" type="search" list="filter-city-list" placeholder="Digite a cidade" autocomplete="off" />
+                  <datalist id="filter-city-list"></datalist>
+                </label>
+                <label>
+                  Atendimento
+                  <select id="filter-modality">
+                    <option value="">Qualquer</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="online">Online</option>
+                  </select>
+                </label>
+                <label>
+                  Nome
+                  <input id="filter-name" type="search" placeholder="Buscar por nome" autocomplete="off" />
+                </label>
+                <button class="btn btn--outline btn--sm" id="filter-clear" type="button">Limpar</button>
+              </form>
+              <p class="pro-count" id="professional-count" role="status" aria-live="polite" hidden></p>
+              <div class="people" id="professional-list">
+                <article class="person">
+                  <div class="portrait portrait-0">
+                    <span>AM</span><small>PERFIL ILUSTRATIVO</small>
+                  </div>
+                  <div class="person-copy">
+                    <span class="kicker">Psicologia · Online</span>
+                    <h3>Ansiedade e rotina</h3>
+                    <p>Um passo de cada vez.</p>
+                    <details>
+                      <summary>Conhecer perfil ↗</summary>
+                      <p>
+                        Exemplo de apresentação profissional. Os dados, registro e
+                        disponibilidade precisam ser cadastrados e verificados antes de um
+                        agendamento.
+                      </p>
+                      <a href="#preferencias">Ver minhas preferências →</a>
+                    </details>
+                  </div>
+                </article>
+                <article class="person">
+                  <div class="portrait portrait-1">
+                    <span>RC</span><small>PERFIL ILUSTRATIVO</small>
+                  </div>
+                  <div class="person-copy">
+                    <span class="kicker">Psicologia · Online</span>
+                    <h3>Relações e vínculos</h3>
+                    <p>Conversas que abrem caminhos.</p>
+                    <details>
+                      <summary>Conhecer perfil ↗</summary>
+                      <p>
+                        Exemplo de apresentação profissional. Os dados, registro e
+                        disponibilidade precisam ser cadastrados e verificados antes de um
+                        agendamento.
+                      </p>
+                      <a href="#preferencias">Ver minhas preferências →</a>
+                    </details>
+                  </div>
+                </article>
+                <article class="person">
+                  <div class="portrait portrait-2">
+                    <span>JL</span><small>PERFIL ILUSTRATIVO</small>
+                  </div>
+                  <div class="person-copy">
+                    <span class="kicker">Psicologia · Online</span>
+                    <h3>Autoconhecimento</h3>
+                    <p>Sua história merece escuta.</p>
+                    <details>
+                      <summary>Conhecer perfil ↗</summary>
+                      <p>
+                        Exemplo de apresentação profissional. Os dados, registro e
+                        disponibilidade precisam ser cadastrados e verificados antes de um
+                        agendamento.
+                      </p>
+                      <a href="#preferencias">Ver minhas preferências →</a>
+                    </details>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </section>
+          <section id="panel-diario" data-patient-panel="diario" hidden>
+            <div id="diary-introduction" class="diary-introduction">
+              <span class="kicker">Um convite, nunca uma obrigação</span>
+              <h1 tabindex="-1">Seu diário, quando você quiser.</h1>
+              <p>
+                Um lugar para registrar emoções, perceber a intensidade e revisitar o que
+                escreveu. Você pode usar a Área do paciente sem ativar o diário.
+              </p>
+              <ul>
+                <li>Escolha como se sente e escreva no seu tempo.</li>
+                <li>Edite, exclua ou baixe seus registros.</li>
+                <li>
+                  Os dados ficam neste navegador, acessíveis a quem usa o dispositivo.
+                </li>
+              </ul>
+              <button class="btn btn--dark" id="enable-diary" type="button">
+                Quero usar meu diário</button
+              ><a class="quiet-link" href="#inicio">Agora não</a>
+            </div>
+            <div id="diary-content" hidden>
+              <div class="diary-settings">
+                <span>Diário ativado · Uso opcional</span
+                ><button class="journal-link" id="disable-diary" type="button">
+                  Desativar diário
+                </button>
+              </div>
+              <section
+                class="care-section journal-section"
+                id="diario"
+                aria-labelledby="journal-title"
+              >
+                <div class="journal-heading">
+                  <div>
+                    <span class="kicker">01 / Um encontro com você</span>
+                    <h2 id="journal-title">Seu diário emocional.</h2>
+                    <p>Perceba o momento. Dê nome ao que sente. Escreva no seu ritmo.</p>
+                  </div>
+                  <span class="journal-date" id="today-label"></span>
+                </div>
+                <div class="journal-layout">
+                  <form id="journal">
+                    <div class="journal-form-heading">
+                      <span class="kicker">Check-in pessoal</span>
+                      <h3 id="editor-title">Como você está agora?</h3>
+                    </div>
+                    <fieldset class="emotion-picker">
+                      <legend>Escolha a emoção mais presente</legend>
+                      <label class="emotion-choice"
+                        ><input
+                          type="radio"
+                          name="mood"
+                          value="Tranquilo"
+                          required
+                        /><span><b aria-hidden="true">◡</b>Tranquilo</span></label
+                      ><label class="emotion-choice"
+                        ><input type="radio" name="mood" value="Animado" required /><span
+                          ><b aria-hidden="true">✦</b>Animado</span
+                        ></label
+                      ><label class="emotion-choice"
+                        ><input type="radio" name="mood" value="Ansioso" required /><span
+                          ><b aria-hidden="true">≈</b>Ansioso</span
+                        ></label
+                      ><label class="emotion-choice"
+                        ><input type="radio" name="mood" value="Triste" required /><span
+                          ><b aria-hidden="true">☂</b>Triste</span
+                        ></label
+                      ><label class="emotion-choice"
+                        ><input type="radio" name="mood" value="Cansado" required /><span
+                          ><b aria-hidden="true">☾</b>Cansado</span
+                        ></label
+                      ><label class="emotion-choice"
+                        ><input type="radio" name="mood" value="Irritado" required /><span
+                          ><b aria-hidden="true">ϟ</b>Irritado</span
+                        ></label
+                      >
+                    </fieldset>
+                    <div class="intensity-heading">
+                      <label for="intensity">Qual é a intensidade?</label
+                      ><output id="intensity-value" for="intensity"
+                        >3 de 5 · Moderada</output
+                      >
+                    </div>
+                    <input id="intensity" type="range" min="1" max="5" value="3" />
+                    <div class="range-labels">
+                      <span>Leve</span><span>Muito intensa</span>
+                    </div>
+                    <label for="thought">O que você gostaria de registrar?</label>
+                    <p class="writing-prompt">
+                      O que aconteceu? Como isso mexeu com você? O que poderia ajudar
+                      agora?
+                    </p>
+                    <textarea
+                      id="thought"
+                      maxlength="4000"
+                      required
+                      rows="6"
+                      placeholder="Hoje, eu percebi que…"
+                    ></textarea
+                    ><span id="character-count">0 / 4.000</span>
+                    <label for="context"
+                      >Sobre qual parte do seu dia? <small>(opcional)</small></label
+                    ><select id="context">
+                      <option value="">Sem categoria</option>
+                      <option>Trabalho ou estudos</option>
+                      <option>Relacionamentos</option>
+                      <option>Família</option>
+                      <option>Saúde e descanso</option>
+                      <option>Tempo comigo</option>
+                    </select>
+                    <div class="journal-actions">
+                      <button class="btn btn--dark" id="save-entry" type="submit">
+                        Salvar registro ↗</button
+                      ><button class="journal-link" id="cancel-edit" type="button" hidden>
+                        Cancelar edição
+                      </button>
+                    </div>
+                    <p id="journal-status" role="status" aria-live="polite"></p>
+                    <small class="journal-privacy"
+                      >Seus registros ficam somente neste navegador, sem sincronização.
+                      Quem usa este dispositivo pode acessá-los.</small
+                    >
+                  </form>
+                  <aside class="journal-side">
+                    <div class="journal-overview">
+                      <span class="kicker">Sua trajetória</span
+                      ><strong id="entry-total">0</strong
+                      ><span>momentos registrados</span>
+                      <p>
+                        Cada registro é um espaço para se escutar. Não precisa escrever
+                        todos os dias.
+                      </p>
+                    </div>
+                    <div class="journal-reflection">
+                      <span aria-hidden="true">“</span>
+                      <p>Você pode sentir mais de uma coisa ao mesmo tempo.</p>
+                      <small>Não existe resposta certa aqui.</small>
+                    </div>
+                  </aside>
+                </div>
+                <div class="journal-history">
+                  <div class="history-toolbar">
+                    <div>
+                      <span class="kicker">Para revisitar com calma</span>
+                      <h3>Seus registros</h3>
+                    </div>
+                    <div>
+                      <label for="filter-mood" class="sr-only">Filtrar por emoção</label
+                      ><select id="filter-mood">
+                        <option value="">Todas as emoções</option>
+                        <option>Tranquilo</option>
+                        <option>Animado</option>
+                        <option>Ansioso</option>
+                        <option>Triste</option>
+                        <option>Cansado</option>
+                        <option>Irritado</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="entries" aria-live="polite"></div>
+                  <button id="export-journal" class="journal-link" type="button">
+                    Baixar meus registros
+                  </button>
+                </div>
+              </section>
+            </div>
+            <p id="patient-status" role="status"></p>
+          </section>
+          <section
+            id="panel-preferencias"
+            class="preferences-panel"
+            data-patient-panel="preferencias"
+            hidden
+          >
+            <span class="kicker">Um cuidado com a sua cara</span>
+            <h1 tabindex="-1">Suas preferências.</h1>
+            <p>
+              Estas respostas ajudam você a organizar o que procura. Você pode mudá-las
+              quando quiser.
+            </p>
+            <dl id="preferences-summary"></dl>
+            <a class="btn btn--dark" href="index.html?revisar=1"
+              >Revisar o quiz inicial ↗</a
+            >
+            <p class="preferences-note">
+              As respostas ficam apenas nesta sessão do navegador e não representam uma
+              avaliação clínica.
+            </p>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

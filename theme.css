@@ -1,0 +1,199 @@
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #d0d3d5;
+  border-radius: 8px;
+  background: transparent;
+  color: #383e43;
+  font:
+    500 12px Arial,
+    sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  background: #eeefef;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #151719;
+  --ink: #eaeced;
+  --dark: #595f65;
+  --muted: #b1b5ba;
+  --line: #3e4245;
+  --section-bg: #1b1e21;
+  --section-line: #3e4245;
+  --card-bg: #24282b;
+  --footer-bg: #111214;
+  --footer-line: #3e4245;
+  --tint-rose: #353a3f;
+  --tint-sand: #353a3f;
+  --tint-sky: #353a3f;
+}
+html[data-theme="dark"] body {
+  background: #151719;
+  color: #eaeced;
+}
+html[data-theme="dark"] :is(.site-header, .contact, .history, .cta, .steps, .why) {
+  background: #1b1e21;
+  border-color: #3e4245;
+}
+html[data-theme="dark"]
+  :is(.step-card, .person, .auth__card, .cta__card, #journal, .moment-panel) {
+  background: #24282b;
+  border-color: #3e4245;
+}
+html[data-theme="dark"]
+  :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    label,
+    legend,
+    .option__title,
+    .chip__label,
+    .main-nav a,
+    .auth__back,
+    .pro__back,
+    .auth-google,
+    .pro-google,
+    .theme-toggle,
+    .btn--outline,
+    .quiet-link,
+    .moment-bottom a,
+    .person summary,
+    .quiz-final__back
+  ) {
+  color: #eaeced;
+}
+html[data-theme="dark"]
+  :is(
+    p,
+    small,
+    .kicker,
+    .hero__eyebrow,
+    .moment-top,
+    .moment-bottom > span,
+    .quiz-progress__meta,
+    .option__desc,
+    .auth__divider,
+    .pro__divider,
+    .auth-field__hint,
+    .pro-field__hint
+  ) {
+  color: #b1b5ba;
+}
+html[data-theme="dark"] .hero__title em {
+  color: #a2a8ad;
+}
+html[data-theme="dark"]
+  :is(
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible
+  ) {
+  outline-color: #c2c5c9;
+}
+html[data-theme="dark"]
+  :is(
+    .field input,
+    .field textarea,
+    .auth-field input,
+    .pro-field input,
+    #journal textarea,
+    #journal select
+  ) {
+  background: #1b1e20;
+  color: #eaeced;
+  border-color: #565b60;
+}
+html[data-theme="dark"] :is(input, textarea)::placeholder {
+  color: #9fa4a9;
+}
+html[data-theme="dark"]
+  :is(
+    .theme-toggle,
+    .btn--outline,
+    .auth-google,
+    .pro-google,
+    .chip__label,
+    .option__card
+  ) {
+  border-color: #565b60;
+  background: transparent;
+}
+html[data-theme="dark"]
+  :is(.theme-toggle, .btn--outline, .auth-google, .pro-google):hover,
+html[data-theme="dark"] .option:hover .option__card,
+html[data-theme="dark"] .chip:hover .chip__label {
+  background: #2e3338;
+}
+html[data-theme="dark"] .option__input:checked + .option__card {
+  background: #373c41;
+  border-color: #b7bbbf;
+  box-shadow: 0 0 0 1px #b7bbbf;
+}
+html[data-theme="dark"] .option__input:checked + .option__card .option__title {
+  color: #eff0f1;
+}
+html[data-theme="dark"] .chip__input:checked + .chip__label {
+  background: #555a5f;
+  border-color: #b7bbbf;
+  color: #fff;
+}
+html[data-theme="dark"] .quiz-progress__bar {
+  background: #363b40;
+}
+html[data-theme="dark"] .quiz-progress__fill {
+  background: #b7bbbf;
+}
+html[data-theme="dark"] :is(.care-section, .moment-bottom a, #entries p) {
+  border-color: #3e4245;
+}
+html[data-theme="dark"] :is(.person a, #clear-journal, .auth__login a, .auth__signup a) {
+  color: #cccfd2;
+}
+html[data-theme="dark"] .portrait {
+  background: #373c41;
+}
+html[data-theme="dark"] .portrait-1 {
+  background: #3b4439;
+}
+html[data-theme="dark"] .portrait-2 {
+  background: #3f4448;
+}
+html[data-theme="dark"] .portrait small {
+  color: #e7e8e9;
+}
+html[data-theme="dark"] .quiz-step__error {
+  background: #482a32;
+  color: #ffd4dc;
+}
+html[data-theme="dark"] .btn--dark,
+html[data-theme="dark"] .form-submit {
+  background: #545a5f;
+  border-color: #6f777e;
+  color: #fff;
+}
+html[data-theme="dark"] .btn--dark:hover,
+html[data-theme="dark"] .form-submit:hover {
+  background: #646a70;
+}
+@media (max-width: 1100px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px;
+    gap: 16px;
+  }
+  .header-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

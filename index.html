@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Seu primeiro passo — Safemind</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="match.css" />
+    <link rel="stylesheet" href="refinement.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="brand-sections.css" />
+    <link rel="stylesheet" href="onboarding.css" />
+    <script src="theme.js"></script>
+      <link rel="stylesheet" href="motion.css" />
+    <script src="motion.js"></script>
+  </head>
+  <body class="onboarding-page">
+    <header class="onboarding-header">
+      <a class="logo" href="boas-vindas.html" data-leave-quiz
+        ><img class="brand-image" src="brand-light.svg" alt="Safemind"
+      /></a>
+      <div class="header-actions"></div>
+    </header>
+    <main class="onboarding-layout">
+      <aside class="onboarding-aside">
+        <span class="kicker">Antes de começar</span>
+        <h2>Seu cuidado<br />começa com<br /><em>uma conversa.</em></h2>
+        <p>
+          Algumas perguntas para organizar suas preferências. Sem pressa, sem resposta
+          certa.
+        </p>
+        <ol id="onboarding-steps">
+          <li>Seu contato com a terapia</li>
+          <li>Seu momento</li>
+          <li>Formato de atendimento</li>
+          <li>Sua disponibilidade</li>
+          <li>Seu espaço pessoal</li>
+        </ol>
+        <a href="boas-vindas.html" data-leave-quiz>Prefiro conhecer o site primeiro →</a>
+      </aside>
+      <div class="onboarding-card">
+        <div class="quiz-progress__meta">
+          <span id="progress-label">Pergunta 1 de 5</span><span>Seu primeiro passo</span>
+        </div>
+        <div
+          id="progress-bar"
+          class="quiz-progress__bar"
+          role="progressbar"
+          aria-label="Progresso do quiz"
+          aria-valuemin="0"
+          aria-valuemax="5"
+          aria-valuenow="1"
+        >
+          <span id="progress-fill" class="quiz-progress__fill"></span>
+        </div>
+        <form class="quiz__form" id="match-form" novalidate>
+          <div class="quiz-step" data-step="1">
+            <p class="quiz__step">Pergunta 01</p>
+            <h1 id="q1-title" class="quiz__title" tabindex="-1">
+              É sua primeira vez fazendo terapia?
+            </h1>
+            <p id="q1-hint" class="quiz__hint">
+              Vamos começar entendendo o que você procura neste momento.
+            </p>
+
+            <div
+              class="quiz__options"
+              role="radiogroup"
+              aria-labelledby="q1-title"
+              aria-describedby="q1-hint"
+            >
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="experiencia"
+                  value="primeira-vez"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title">É minha primeira vez</span>
+                    <span class="option__desc">Nunca fiz terapia antes</span>
+                  </span>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="experiencia"
+                  value="ja-fiz-e-parei"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title">Já fiz, mas parei</span>
+                    <span class="option__desc"
+                      >Tive experiência anterior com terapia</span
+                    >
+                  </span>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="experiencia"
+                  value="trocando-de-profissional"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title">Estou trocando de profissional</span>
+                    <span class="option__desc">Quero encontrar alguém novo</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+
+            <p class="quiz-step__error" role="alert" hidden>
+              Escolha uma opção para continuar.
+            </p>
+
+            <div class="quiz-nav">
+              <button
+                class="btn btn--dark quiz-nav__next"
+                type="button"
+                data-action="next"
+              >
+                Continuar
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-step" data-step="2" hidden>
+            <p class="quiz__step">Pergunta 02</p>
+            <h1 id="q2-title" class="quiz__title" tabindex="-1">
+              Como você descreve o que está vivendo?
+            </h1>
+
+            <div class="quiz__options" role="radiogroup" aria-labelledby="q2-title">
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="momento"
+                  value="pontual"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title">Estou passando por algo pontual</span>
+                    <span class="option__desc"
+                      >Quero entender e lidar melhor com isso</span
+                    >
+                  </span>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="momento"
+                  value="padrao-antigo"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title">Isso já faz tempo e quero mudar</span>
+                    <span class="option__desc"
+                      >Sinto que repito padrões e quero evoluir</span
+                    >
+                  </span>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="momento"
+                  value="autoconhecimento"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title">Estou bem, mas quero crescer</span>
+                    <span class="option__desc"
+                      >Busco autoconhecimento e desenvolvimento</span
+                    >
+                  </span>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="momento"
+                  value="urgente"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title"
+                      >Estou em sofrimento e preciso de apoio urgente</span
+                    >
+                    <span class="option__desc">Preciso de ajuda agora</span>
+                  </span>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="momento"
+                  value="indeciso"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title">Ainda não tenho certeza</span>
+                    <span class="option__desc">Quero conversar pra entender melhor</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+
+            <p class="quiz-step__error" role="alert" hidden>
+              Escolha uma opção para continuar.
+            </p>
+
+            <div class="quiz-nav">
+              <button
+                class="btn btn--outline quiz-nav__back"
+                type="button"
+                data-action="prev"
+              >
+                Voltar
+              </button>
+              <button
+                class="btn btn--dark quiz-nav__next"
+                type="button"
+                data-action="next"
+              >
+                Continuar
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-step" data-step="3" hidden>
+            <p class="quiz__step">Pergunta 03</p>
+            <h1 id="q3-title" class="quiz__title" tabindex="-1">
+              Prefere atendimento online ou presencial?
+            </h1>
+            <p id="q3-hint" class="quiz__hint">
+              Assim direcionamos logo pra quem atende no formato que você quer
+            </p>
+
+            <div
+              class="quiz__options"
+              role="radiogroup"
+              aria-labelledby="q3-title"
+              aria-describedby="q3-hint"
+            >
+              <label class="option">
+                <input class="option__input" type="radio" name="formato" value="online" />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title"
+                      ><span aria-hidden="true">💻</span> Online</span
+                    >
+                    <span class="option__desc"
+                      >De onde eu estiver, sem precisar sair de casa</span
+                    >
+                  </span>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="formato"
+                  value="presencial"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title"
+                      ><span aria-hidden="true">🏠</span> Presencial</span
+                    >
+                    <span class="option__desc">Encontros na minha cidade</span>
+                  </span>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  class="option__input"
+                  type="radio"
+                  name="formato"
+                  value="tanto-faz"
+                />
+                <span class="option__card">
+                  <span class="option__radio" aria-hidden="true"></span>
+                  <span class="option__text">
+                    <span class="option__title">Tanto faz</span>
+                    <span class="option__desc">Estou aberto(a) às duas opções</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+
+            <p class="quiz-step__error" role="alert" hidden>
+              Escolha uma opção para continuar.
+            </p>
+
+            <div class="quiz-nav">
+              <button
+                class="btn btn--outline quiz-nav__back"
+                type="button"
+                data-action="prev"
+              >
+                Voltar
+              </button>
+              <button
+                class="btn btn--dark quiz-nav__next"
+                type="button"
+                data-action="next"
+              >
+                Continuar
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-step" data-step="4" hidden>
+            <p class="quiz__step">Pergunta 04</p>
+            <h1 id="q4-title" class="quiz__title" tabindex="-1">
+              Quais horários funcionam melhor pra você?
+            </h1>
+            <p class="quiz__hint">Assim alinhamos com profissionais compatíveis</p>
+
+            <fieldset class="quiz-group">
+              <legend class="quiz-group__title">Horários preferenciais:</legend>
+
+              <div class="chip-group">
+                <label class="chip">
+                  <input
+                    class="chip__input"
+                    type="checkbox"
+                    name="horarios"
+                    value="manha"
+                  />
+                  <span class="chip__label">Manhã</span>
+                </label>
+                <label class="chip">
+                  <input
+                    class="chip__input"
+                    type="checkbox"
+                    name="horarios"
+                    value="tarde"
+                  />
+                  <span class="chip__label">Tarde</span>
+                </label>
+                <label class="chip">
+                  <input
+                    class="chip__input"
+                    type="checkbox"
+                    name="horarios"
+                    value="noite"
+                  />
+                  <span class="chip__label">Noite</span>
+                </label>
+                <label class="chip">
+                  <input
+                    class="chip__input"
+                    type="checkbox"
+                    name="horarios"
+                    value="fim-de-semana"
+                  />
+                  <span class="chip__label">Finais de semana</span>
+                </label>
+                <label class="chip">
+                  <input
+                    class="chip__input"
+                    type="checkbox"
+                    name="horarios"
+                    value="flexivel"
+                  />
+                  <span class="chip__label">Flexível / a combinar</span>
+                </label>
+              </div>
+
+              <p class="quiz-step__error" role="alert" hidden>
+                Escolha ao menos um horário.
+              </p>
+            </fieldset>
+
+            <div class="quiz-nav">
+              <button
+                class="btn btn--outline quiz-nav__back"
+                type="button"
+                data-action="prev"
+              >
+                Voltar
+              </button>
+              <button
+                class="btn btn--dark quiz-nav__next"
+                type="button"
+                data-action="next"
+              >
+                Continuar
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-step" data-step="5" hidden>
+            <p class="quiz__step">Pergunta 05</p>
+            <h1 class="quiz__title" tabindex="-1">
+              Quer um espaço para registrar suas emoções?
+            </h1>
+            <p class="quiz__hint">
+              O diário é opcional e fica dentro da Área do paciente. Você pode ativá-lo ou
+              desativá-lo depois.
+            </p>
+            <div class="quiz__options" role="radiogroup" aria-label="Uso do diário">
+              <label class="option"
+                ><input
+                  class="option__input"
+                  type="radio"
+                  name="diario"
+                  value="sim"
+                /><span class="option__card"
+                  ><span class="option__radio" aria-hidden="true"></span
+                  ><span class="option__text"
+                    ><span class="option__title">Sim, quero experimentar</span
+                    ><span class="option__desc"
+                      >Um espaço para escrever e revisitar meus momentos.</span
+                    ></span
+                  ></span
+                ></label
+              ><label class="option"
+                ><input
+                  class="option__input"
+                  type="radio"
+                  name="diario"
+                  value="nao"
+                /><span class="option__card"
+                  ><span class="option__radio" aria-hidden="true"></span
+                  ><span class="option__text"
+                    ><span class="option__title">Agora não</span
+                    ><span class="option__desc"
+                      >Quero explorar a área sem usar o diário.</span
+                    ></span
+                  ></span
+                ></label
+              >
+            </div>
+            <p class="quiz-step__error" role="alert" hidden>
+              Escolha uma opção para continuar.
+            </p>
+            <div class="quiz-nav">
+              <button class="btn btn--outline" type="button" data-action="prev">
+                Voltar</button
+              ><button class="btn btn--dark" type="button" data-action="next">
+                Continuar
+              </button>
+            </div>
+          </div>
+          <div class="quiz-step quiz-step--final" data-step="6" hidden>
+            <span class="completion-symbol" aria-hidden="true">✓</span>
+            <h1 class="quiz-final__title" tabindex="-1">Um começo que respeita você.</h1>
+            <p>
+              Na sua área, você encontra profissionais, suas preferências e o diário, se
+              quiser usá-lo.
+            </p>
+            <p class="quiz-storage-note">
+              Suas respostas ficam nesta sessão do navegador. Este quiz não faz
+              diagnóstico nem gera uma recomendação clínica.
+            </p>
+            <button class="btn btn--dark" type="submit">
+              Entrar na Área do paciente ↗</button
+            ><button class="quiz-final__back" type="button" data-action="prev">
+              Revisar respostas
+            </button>
+            <p id="onboarding-status" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="welcome.js"></script>
+  </body>
+</html>

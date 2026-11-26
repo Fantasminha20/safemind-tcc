@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Administração — Safemind</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="refinement.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="brand-sections.css" />
+    <link rel="stylesheet" href="access.css" />
+    <script src="theme.js"></script>
+    <script>
+      document.documentElement.classList.add("auth-pending");
+      setTimeout(function () {
+        if (document.documentElement.classList.contains("auth-pending"))
+          location.replace("login.html?next=admin.html");
+      }, 12000);
+    </script>
+    <script type="module" src="admin.js"></script>
+      <link rel="stylesheet" href="motion.css" />
+    <script src="motion.js"></script>
+  </head>
+  <body>
+    <div class="admin-page" id="admin-app" hidden>
+      <header class="admin-bar">
+        <a class="logo" href="boas-vindas.html"
+          ><img class="brand-image" src="brand-light.svg" alt="Safemind"
+        /></a>
+        <div>
+          <span id="admin-user"></span>
+          <a class="btn btn--outline btn--sm" href="configuracoes.html">⚙ Configurações</a>
+          <button class="btn btn--outline btn--sm" id="admin-logout" type="button">Sair</button>
+        </div>
+      </header>
+      <h1>Aprovação de psicólogos</h1>
+      <p>
+        Confira o CRP no
+        <a href="https://cadastro.cfp.org.br/" target="_blank" rel="noopener noreferrer"
+          >cadastro do Conselho Federal de Psicologia</a
+        >
+        antes de aprovar. Quem for aprovado passa a ver a Área do psicólogo no próximo acesso
+        e aparece na lista de profissionais dos pacientes.
+      </p>
+      <div class="admin-filters" role="group" aria-label="Filtrar por situação">
+        <button class="btn btn--outline btn--sm" data-status="pending" aria-pressed="true" type="button">Pendentes</button>
+        <button class="btn btn--outline btn--sm" data-status="approved" aria-pressed="false" type="button">Aprovados</button>
+        <button class="btn btn--outline btn--sm" data-status="rejected" aria-pressed="false" type="button">Recusados</button>
+      </div>
+      <p class="admin-status" id="admin-status" role="status"></p>
+      <div class="admin-list" id="admin-list"></div>
+    </div>
+  </body>
+</html>

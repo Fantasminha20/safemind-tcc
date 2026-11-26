@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Questionário profissional — Safemind</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="match.css" />
+    <link rel="stylesheet" href="refinement.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="brand-sections.css" />
+    <link rel="stylesheet" href="onboarding.css" />
+    <link rel="stylesheet" href="access.css" />
+    <script src="theme.js"></script>
+    <script>
+      document.documentElement.classList.add("auth-pending");
+      setTimeout(function () {
+        if (document.documentElement.classList.contains("auth-pending"))
+          location.replace("login.html?next=onboarding-profissional.html");
+      }, 12000);
+    </script>
+      <link rel="stylesheet" href="motion.css" />
+    <script src="motion.js"></script>
+  </head>
+  <body class="onboarding-page">
+    <header class="onboarding-header">
+      <a class="logo" href="boas-vindas.html"
+        ><img class="brand-image" src="brand-light.svg" alt="Safemind"
+      /></a>
+      <div class="header-actions"></div>
+    </header>
+    <main class="onboarding-layout">
+      <aside class="onboarding-aside">
+        <span class="kicker">Área do psicólogo</span>
+        <h2>Conte um pouco<br />sobre o seu<br /><em>trabalho.</em></h2>
+        <p>
+          Sete perguntas rápidas para conhecermos a sua prática. Elas ficam na sua conta e
+          são vistas só por você e pela equipe Safemind.
+        </p>
+        <ol id="onboarding-steps"></ol>
+        <a href="psicologo.html">Responder depois →</a>
+      </aside>
+      <div class="onboarding-card">
+        <div class="quiz-progress__meta">
+          <span id="progress-label">Pergunta 1 de 7</span><span>Questionário profissional</span>
+        </div>
+        <div
+          id="progress-bar"
+          class="quiz-progress__bar"
+          role="progressbar"
+          aria-label="Progresso do questionário"
+          aria-valuemin="0"
+          aria-valuemax="7"
+          aria-valuenow="1"
+        >
+          <span id="progress-fill" class="quiz-progress__fill"></span>
+        </div>
+        <form class="quiz__form" id="pro-quiz-form" novalidate></form>
+      </div>
+    </main>
+    <script type="module" src="onboarding-profissional.js"></script>
+  </body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Safemind — Encontre o psicólogo certo para você</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Bree+Serif&family=Playball&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="experience.css" />
+    <link rel="stylesheet" href="refinement.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <script src="theme.js"></script>
+
+    <link rel="stylesheet" href="brand-sections.css" />
+      <link rel="stylesheet" href="motion.css" />
+    <script src="motion.js"></script>
+  </head>
+  <body>
+    <svg
+      width="0"
+      height="0"
+      style="position: absolute"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <path
+          id="petal"
+          d="M0 0 C-6 -5 -10 -9 -6.5 -13 C-3.5 -16 0 -13.5 0 -11 C0 -13.5 3.5 -16 6.5 -13 C10 -9 6 -5 0 0Z"
+        />
+        <symbol id="brand-mark" viewBox="-16 -16 32 32">
+          <g fill="none" stroke-width="1.5" stroke-linejoin="round">
+            <use href="#petal" stroke="#e6457f" />
+            <use href="#petal" stroke="#f5b400" transform="rotate(90)" />
+            <use href="#petal" stroke="#f0703a" transform="rotate(180)" />
+            <use href="#petal" stroke="#7a52d1" transform="rotate(270)" />
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="boas-vindas.html" aria-label="Safemind — página inicial">
+          <img class="brand-image" src="brand-light.svg" alt="Safemind" />
+        </a>
+
+        <nav class="main-nav" aria-label="Principal">
+          <ul>
+            <li><a href="index.html">Sou paciente</a></li>
+
+            <li><a href="#especialistas">Profissionais</a></li>
+            <li><a href="psicologo.html">Sou psicólogo</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn--outline btn--sm" href="login.html">Entrar</a>
+          <a class="btn btn--dark btn--sm" href="cadastro.html">Cadastrar</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero home-hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="hero__eyebrow">Cuidado emocional, no seu tempo</p>
+          <h1 id="hero-title" class="hero__title">
+            Você não precisa<br />ter todas<br /><em>as respostas.</em>
+          </h1>
+          <p class="hero-description">
+            Um espaço para entender o que você sente, registrar sua história e encontrar
+            quem possa caminhar com você.
+          </p>
+          <div class="hero__actions role-actions">
+            <a class="btn btn--dark" href="index.html"
+              >Sou paciente <span aria-hidden="true">↗</span></a
+            ><a class="btn btn--outline" href="psicologo.html"
+              >Sou psicólogo <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <p class="role-hint">Escolha seu espaço para começar.</p>
+          <p class="hero-signature">Uma criação da Mentis · Feita para acolher</p>
+        </div>
+        <div class="moment-panel">
+          <div class="moment-top">
+            <span>Seu espaço de pausa</span><span aria-hidden="true">✧</span>
+          </div>
+          <div class="brain-illustration" aria-hidden="true">
+            <svg viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient
+                  id="brain-spectrum"
+                  x1="25"
+                  y1="165"
+                  x2="205"
+                  y2="30"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop class="brain-pink" offset="0" />
+                  <stop class="brain-purple" offset=".23" />
+                  <stop class="brain-blue" offset=".43" />
+                  <stop class="brain-green" offset=".64" />
+                  <stop class="brain-yellow" offset=".81" />
+                  <stop class="brain-orange" offset="1" />
+                </linearGradient>
+              </defs>
+              <g
+                stroke="url(#brain-spectrum)"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M120 47C120 23 86 17 75 39C56 31 36 46 39 67C17 75 15 103 31 115C18 137 34 159 55 158C57 181 83 189 99 176C108 182 120 174 120 159V47Z"
+                />
+                <path
+                  d="M120 47C120 23 154 17 165 39C184 31 204 46 201 67C223 75 225 103 209 115C222 137 206 159 185 158C183 181 157 189 141 176C132 182 120 174 120 159"
+                />
+                <path
+                  d="M75 39C69 54 79 66 92 66M39 67C49 62 61 68 64 79M31 115C42 103 57 106 62 118M55 158C51 144 62 133 74 136M99 176C101 160 91 152 83 154M120 87C101 89 93 100 98 113M120 139C100 140 91 128 95 119M66 95C80 92 84 81 79 74"
+                />
+                <path
+                  d="M165 39C171 54 161 66 148 66M201 67C191 62 179 68 176 79M209 115C198 103 183 106 178 118M185 158C189 144 178 133 166 136M141 176C139 160 149 152 157 154M120 87C139 89 147 100 142 113M120 139C140 140 149 128 145 119M174 95C160 92 156 81 161 74"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="moment-bottom">
+            <span>Um pequeno começo</span>
+            <h2>Como você está,<br />de verdade?</h2>
+            <p>Às vezes, cuidar de si começa<br />com uma pergunta simples.</p>
+            <a href="index.html"
+              >Começar como paciente <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <svg
+        width="0"
+        height="0"
+        style="position: absolute"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <defs>
+          <linearGradient
+            id="icon-rainbow"
+            gradientUnits="userSpaceOnUse"
+            x1="0"
+            y1="24"
+            x2="24"
+            y2="0"
+          >
+            <stop offset="0" stop-color="#df2784" />
+            <stop offset="0.22" stop-color="#9348c6" />
+            <stop offset="0.43" stop-color="#398cda" />
+            <stop offset="0.62" stop-color="#68bd83" />
+            <stop offset="0.8" stop-color="#f3cf32" />
+            <stop offset="1" stop-color="#ee8441" />
+          </linearGradient>
+          <symbol id="i-pencil" viewBox="0 0 24 24">
+            <path d="M12 20h9" />
+            <path
+              d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"
+            />
+          </symbol>
+          <symbol id="i-eyes" viewBox="0 0 24 24">
+            <ellipse cx="7.3" cy="12" rx="4.3" ry="5.4" />
+            <ellipse cx="16.7" cy="12" rx="4.3" ry="5.4" />
+            <circle cx="8.4" cy="13.2" r="1.9" fill="url(#icon-rainbow)" stroke="none" />
+            <circle cx="17.8" cy="13.2" r="1.9" fill="url(#icon-rainbow)" stroke="none" />
+          </symbol>
+          <symbol id="i-chat" viewBox="0 0 24 24">
+            <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z" />
+            <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+            <path d="M6 6.5h.01M8 6.5h.01M10 6.5h.01" />
+          </symbol>
+          <symbol id="i-handshake" viewBox="0 0 24 24">
+            <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+            <path
+              d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"
+            />
+            <path d="m21 3 1 11h-2" />
+            <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+            <path d="M3 4h8" />
+          </symbol>
+        </defs>
+      </svg>
+
+      <section class="patient-invitation care-section" id="espaco-paciente">
+        <div>
+          <span class="kicker">Um espaço que acompanha você</span>
+          <h2>Seu cuidado,<br />do seu jeito.</h2>
+          <p>
+            Organize suas preferências e conheça os profissionais em um só lugar. Se
+            quiser escrever, seu diário emocional também fica por lá.
+          </p>
+          <a class="btn btn--dark" href="index.html"
+            >Abrir minha área <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="patient-invitation__visual" aria-hidden="true">
+          <span>Seu espaço pessoal</span>
+          <div><i class="color-dot dot-blue"></i>Visão geral</div>
+          <div><i class="color-dot dot-green"></i>Profissionais</div>
+          <div>
+            <i class="color-dot dot-pink"></i>Diário emocional <small>Opcional</small>
+          </div>
+        </div>
+      </section>
+      <section class="care-section" id="especialistas">
+        <span class="kicker">02 / Conexões que acolhem</span>
+        <h2>Encontre espaço para ser você.</h2>
+        <p>
+          Explore os perfis. Passe o cursor, use o teclado ou toque para conhecer mais.
+        </p>
+        <div class="people">
+          <article class="person">
+            <div class="portrait portrait-0">
+              <span>AM</span><small>PERFIL ILUSTRATIVO</small>
+            </div>
+            <div class="person-copy">
+              <span class="kicker">Psicologia · Online</span>
+              <h3>Ansiedade e rotina</h3>
+              <p>Um passo de cada vez.</p>
+              <details>
+                <summary>Conhecer perfil ↗</summary>
+                <p>
+                  Exemplo de apresentação profissional. Os dados, registro e
+                  disponibilidade precisam ser cadastrados e verificados antes de um
+                  agendamento.
+                </p>
+                <a href="index.html?destino=profissionais"
+                  >Ver profissionais na minha área →</a
+                >
+              </details>
+            </div>
+          </article>
+          <article class="person">
+            <div class="portrait portrait-1">
+              <span>RC</span><small>PERFIL ILUSTRATIVO</small>
+            </div>
+            <div class="person-copy">
+              <span class="kicker">Psicologia · Online</span>
+              <h3>Relações e vínculos</h3>
+              <p>Conversas que abrem caminhos.</p>
+              <details>
+                <summary>Conhecer perfil ↗</summary>
+                <p>
+                  Exemplo de apresentação profissional. Os dados, registro e
+                  disponibilidade precisam ser cadastrados e verificados antes de um
+                  agendamento.
+                </p>
+                <a href="index.html?destino=profissionais"
+                  >Ver profissionais na minha área →</a
+                >
+              </details>
+            </div>
+          </article>
+          <article class="person">
+            <div class="portrait portrait-2">
+              <span>JL</span><small>PERFIL ILUSTRATIVO</small>
+            </div>
+            <div class="person-copy">
+              <span class="kicker">Psicologia · Online</span>
+              <h3>Autoconhecimento</h3>
+              <p>Sua história merece escuta.</p>
+              <details>
+                <summary>Conhecer perfil ↗</summary>
+                <p>
+                  Exemplo de apresentação profissional. Os dados, registro e
+                  disponibilidade precisam ser cadastrados e verificados antes de um
+                  agendamento.
+                </p>
+                <a href="index.html?destino=profissionais"
+                  >Ver profissionais na minha área →</a
+                >
+              </details>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="steps" id="match" aria-labelledby="steps-pacientes-title">
+        <header class="steps__head">
+          <p class="steps__eyebrow">Como funciona para encontrar um profissional?</p>
+          <h2 id="steps-pacientes-title" class="steps__title">
+            Da dúvida ao primeiro contato com o psicólogo
+          </h2>
+          <p class="steps__lead">
+            Conta pra gente o que sente e a gente encontra a melhor opção de quem pode te
+            ajudar.
+          </p>
+        </header>
+
+        <ol class="steps__grid">
+          <li class="step-card">
+            <span class="step-card__icon step-card__icon--rose" aria-hidden="true">
+              <svg><use href="#i-pencil" /></svg>
+            </span>
+            <p class="step-card__step">Passo 01</p>
+            <h3 class="step-card__title">Conte como você se sente</h3>
+            <p class="step-card__text">
+              Perguntas simples, sem jargão clínico. Você não precisa saber nada sobre
+              abordagens, só responder com sinceridade.
+            </p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-card__icon step-card__icon--sand" aria-hidden="true">
+              <svg><use href="#i-eyes" /></svg>
+            </span>
+            <p class="step-card__step">Passo 02</p>
+            <h3 class="step-card__title">Conheça quem é compatível</h3>
+            <p class="step-card__text">
+              Você recebe profissionais compatíveis, com o motivo de cada sugestão. Pra
+              você decidir com clareza, não por sorte.
+            </p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-card__icon step-card__icon--sky" aria-hidden="true">
+              <svg><use href="#i-chat" /></svg>
+            </span>
+            <p class="step-card__step">Passo 03</p>
+            <h3 class="step-card__title">Entre em contato direto</h3>
+            <p class="step-card__text">
+              Um clique e você já está conversando pelo WhatsApp. Sem intermediário, sem
+              esperar resposta de formulário.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section
+        class="steps steps--divided"
+        id="profissional"
+        aria-labelledby="steps-psicologos-title"
+      >
+        <header class="steps__head">
+          <p class="steps__eyebrow">Eu sou o psicólogo</p>
+          <h2 id="steps-psicologos-title" class="steps__title">
+            Como entro em contato com os pacientes?
+          </h2>
+          <p class="steps__lead">
+            Organize seu perfil e acompanhe seus matchs em um só lugar!
+          </p>
+        </header>
+
+        <ol class="steps__grid">
+          <li class="step-card">
+            <span class="step-card__icon step-card__icon--sky" aria-hidden="true">
+              <svg><use href="#i-handshake" /></svg>
+            </span>
+            <p class="step-card__step">Passo 01</p>
+            <h3 class="step-card__title">Pacientes compatíveis</h3>
+            <p class="step-card__text">
+              Nosso match conecta você a pacientes alinhados com suas especialidades,
+              abordagem e faixa de preço.
+            </p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-card__icon step-card__icon--sand" aria-hidden="true">
+              <svg><use href="#i-eyes" /></svg>
+            </span>
+            <p class="step-card__step">Passo 02</p>
+            <h3 class="step-card__title">Visibilidade sem marketing</h3>
+            <p class="step-card__text">
+              Perfil no catálogo, destaque por desempenho e oportunidades corporativas.
+              Você atende bem, a plataforma faz o resto.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="why" id="sobre" aria-labelledby="why-title">
+        <div class="why__inner">
+          <div class="why__intro">
+            <p class="why__eyebrow">O que nos distingue entre os outros?</p>
+            <h2 id="why-title" class="why__title">Por que escolher a SafeMind?</h2>
+            <p class="why__more">
+              Para descobrir mais curiosidades<br />
+              sobre a Safemind <a href="sobre.html">clique aqui</a>
+            </p>
+          </div>
+
+          <div class="why__list">
+            <div class="why__item">
+              <h3 class="why__item-title">Match inteligente</h3>
+              <p class="why__item-text">
+                O nosso questionário analisa as suas necessidades, preferências e
+                objetivos terapêuticos para sugerir os profissionais com o perfil mais
+                adequado a si. Pode sempre mudar de terapeuta se assim o desejar, de forma
+                simples e em qualquer momento.
+              </p>
+            </div>
+
+            <div class="why__item">
+              <h3 class="why__item-title">Segurança e Acessos restritos</h3>
+              <p class="why__item-text">
+                A sua informação clínica é protegida na plataforma médica certificada
+                iMed, com dados encriptados e acesso exclusivo ao profissional de saúde.
+                As videoconsultas são realizadas através de um link seguro, sem aplicações
+                de terceiros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contato" aria-labelledby="contact-title">
+        <div class="contact__inner">
+          <div class="contact__copy">
+            <h2 id="contact-title" class="contact__title">
+              Tem dúvidas?<br />Fale conosco.
+            </h2>
+            <p>
+              Estamos ao seu dispor para esclarecimento de dúvidas sobre o processo de
+              marcação ou o funcionamento das consultas online.
+            </p>
+            <p>
+              Exponha brevemente o que o traz à consulta e, num prazo máximo de 24 horas,
+              receberá uma resposta personalizada com o encaminhamento para o técnico mais
+              indicado para o seu caso específico.
+            </p>
+          </div>
+
+          <form class="contact__form" action="#" method="post">
+            <div class="field">
+              <label for="nome">Nome:</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email:</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="telefone">Telefone:</label>
+              <input id="telefone" name="telefone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="mensagem">Escreva sua mensagem aqui:</label>
+              <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+            </div>
+
+            <button class="form-submit" type="submit">Enviar mensagem</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer__cols">
+          <div class="footer__col footer__col--brand">
+            <h2 class="footer__title">Contatos</h2>
+            <ul class="footer__contacts">
+              <li>
+                <a href="tel:+550000000000">
+                  <span class="footer__ico footer__ico--circle" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+                  </span>
+                  (55) 0000-0000
+                </a>
+              </li>
+              <li>
+                <a href="mailto:safemind@mentis">
+                  <span class="footer__ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </span>
+                  safemind@mentis
+                </a>
+              </li>
+            </ul>
+
+            <a
+              class="logo logo--footer"
+              href="boas-vindas.html"
+              aria-label="Safemind — página inicial"
+            >
+              <img class="brand-image" src="brand-dark.svg" alt="Safemind" />
+            </a>
+          </div>
+
+          <nav class="footer__col" aria-label="Especialidades">
+            <h2 class="footer__title">Especialidades</h2>
+            <ul class="footer__links">
+              <li><a href="psicologia-clinica.html">Psicologia Clínica</a></li>
+              <li><a href="psiquiatria.html">Psiquiatria</a></li>
+              <li><a href="terapia-de-casal.html">Terapia de Casal</a></li>
+              <li><a href="psicologia-educacional.html">Psicologia Educacional</a></li>
+              <li><a href="terapia-da-fala.html">Terapia da Fala</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer__col" aria-label="Sobre a Safemind">
+            <h2 class="footer__title">Sobre a Safemind</h2>
+            <ul class="footer__links">
+              <li><a href="sobre.html">Quem Somos</a></li>
+              <li><a href="boas-vindas.html#especialistas">Terapeutas</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__col footer__col--social">
+            <p class="footer__follow">Siga nos:</p>
+            <ul class="footer__social">
+              <li>
+                <a href="#" aria-label="Instagram">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <path d="M17.5 6.5h.01" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect width="24" height="24" rx="3" fill="currentColor" />
+                    <g fill="var(--footer-bg)">
+                      <circle cx="6.6" cy="6.3" r="1.8" />
+                      <rect x="5.1" y="9.5" width="3" height="9" />
+                      <path
+                        d="M10.2 9.5H13v1.3c.5-.9 1.6-1.5 3-1.5 2.6 0 3.2 1.7 3.2 3.9v5.3h-3v-4.7c0-1.1-.1-2-1.3-2s-1.7.9-1.7 2v4.7h-3z"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="X (Twitter)">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <p class="footer__cert">Plataforma clínica certificada.</p>
+          </div>
+        </div>
+
+        <p class="footer__legal">© 2026 Safemind Todos os direitos reservados.</p>
+      </div>
+    </footer>
+      <script type="module" src="header-session.js"></script>
+    <script type="module" src="contact.js"></script>
+  </body>
+</html>

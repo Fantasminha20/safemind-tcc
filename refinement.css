@@ -1,0 +1,582 @@
+:root {
+  --bg: #f9fafa;
+  --ink: #25292d;
+  --dark: #2f3439;
+  --muted: #6b7279;
+  --line: #dfe1e2;
+  --section-bg: #f1f2f2;
+  --section-line: #e2e3e5;
+  --card-bg: #fff;
+  --footer-bg: #23272b;
+  --footer-line: #45494d;
+  --font-display: Arial, sans-serif;
+  --font-body: Arial, sans-serif;
+  --font-serif: Arial, sans-serif;
+  --tint-rose: #ebedee;
+  --tint-sand: #ebedee;
+  --tint-sky: #ebedee;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #25292d;
+  background: #f9fafa;
+  line-height: 1.6;
+}
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e6e8e9;
+  height: auto;
+  min-height: 88px;
+}
+.site-header__inner {
+  min-height: 88px;
+  gap: 28px;
+}
+.brand-image {
+  display: block;
+  width: 180px;
+  height: 56px;
+  object-fit: cover;
+  object-position: center 53%;
+  mix-blend-mode: multiply;
+}
+.logo {
+  border: 0 !important;
+  text-decoration: none !important;
+}
+.logo:after {
+  display: none;
+}
+.logo__word,
+.logo__mark {
+  display: none;
+}
+.main-nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #565c61;
+}
+.btn,
+.form-submit {
+  border-radius: 8px;
+  font:
+    600 14px Arial,
+    sans-serif;
+  letter-spacing: 0;
+  min-height: 46px;
+  padding: 13px 22px;
+  box-shadow: none;
+}
+.btn--dark,
+.form-submit {
+  background: #2f3439;
+  border: 1px solid #2f3439;
+  color: #fff;
+}
+.btn--dark:hover,
+.form-submit:hover {
+  background: #44494d;
+  border-color: #44494d;
+}
+.btn--outline {
+  border-color: #d0d3d5;
+  color: #383e43;
+}
+.btn--outline:hover {
+  background: #eeefef;
+  color: #2f3439;
+}
+.hero {
+  max-width: 1100px;
+  margin: auto;
+  padding: 86px 24px 100px;
+  text-align: center;
+}
+.hero__eyebrow {
+  font:
+    500 13px Arial,
+    sans-serif;
+  color: #646a71;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+.hero__title {
+  font:
+    500 clamp(38px, 5.4vw, 68px)/1.13 Arial,
+    sans-serif;
+  letter-spacing: -2.5px;
+  margin: 0 auto 34px;
+  max-width: 900px;
+  color: #25292d;
+}
+.hero__title em {
+  font-style: normal;
+  color: #5b6167;
+  font-weight: 500;
+}
+.hero__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.hero__actions .btn {
+  width: auto;
+  font-size: 14px;
+  min-height: 50px;
+  padding: 16px 25px;
+}
+.btn__play {
+  width: 9px;
+  height: 11px;
+}
+.steps {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.steps__title,
+.why__title,
+.contact__title {
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+.steps__eyebrow {
+  font:
+    500 12px Arial,
+    sans-serif;
+  letter-spacing: 1px;
+  color: #646a71;
+}
+.steps__lead {
+  font:
+    400 16px/1.7 Arial,
+    sans-serif;
+  color: #6b7279;
+}
+.steps__grid {
+  list-style: none;
+  padding-left: 0;
+  gap: 24px;
+}
+.step-card {
+  border-radius: 12px;
+  border: 1px solid #e4e6e7;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 8px 25px #2f343904;
+}
+.step-card__title {
+  font:
+    600 19px/1.4 Arial,
+    sans-serif;
+  color: #32373c;
+}
+.step-card__text {
+  font:
+    400 14px/1.8 Arial,
+    sans-serif;
+  color: #6a7177;
+}
+.step-card__step {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #6f777e;
+}
+.step-card__icon {
+  border-radius: 10px;
+  color: #53585d;
+}
+.why__item-title {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+}
+.why__item-text,
+.contact__copy p {
+  font-family: Arial, sans-serif;
+  color: #6a7177;
+  line-height: 1.8;
+}
+.site-footer {
+  color: #e1e3e5;
+}
+.site-footer .brand-image {
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+.footer__title {
+  color: #edeeef;
+}
+.footer__legal {
+  color: #aaafb3;
+}
+.footer__links a,
+.footer__contacts a {
+  color: #c4c8cb;
+}
+.contact {
+  background: #f3f4f5;
+}
+.form-submit {
+  background: #2f3439;
+  color: white;
+}
+.field input,
+.field textarea {
+  border: 1px solid #d5d8da;
+  border-radius: 8px;
+}
+.home-note {
+  color: #788088;
+  letter-spacing: 2px;
+}
+.care-section h2 {
+  font-weight: 500;
+  color: #25292d;
+}
+.person {
+  border-radius: 12px;
+}
+.person summary {
+  font-size: 13px;
+  font-weight: 600;
+  color: #494e53;
+}
+#journal {
+  background: #f0f1f2;
+  border: 1px solid #e1e3e5;
+  border-radius: 12px;
+}
+body:has(#options) {
+  color: #f5f6f7;
+  background-color: #0a0c0d;
+}
+body:has(#options) header img {
+  width: 190px;
+  height: 62px;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center 53%;
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+body:has(#options) header {
+  border-color: #24282b;
+}
+body:has(#options) footer button {
+  border-radius: 8px;
+}
+body:has(#options) #next {
+  background: #53595e;
+  border: 1px solid #7a8289;
+  box-shadow: 0 3px 20px #7b838a15;
+}
+body:has(#options) #options button {
+  border-radius: 8px;
+}
+body:has(#options) h1 {
+  letter-spacing: -3px;
+}
+@media (max-width: 760px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px;
+    gap: 14px;
+  }
+  .main-nav {
+    order: 3;
+    width: 100%;
+  }
+  .main-nav ul {
+    justify-content: center;
+    gap: 18px;
+  }
+  .brand-image {
+    width: 145px;
+    height: 45px;
+  }
+  .header-actions .btn {
+    padding: 10px 14px;
+    min-height: 40px;
+    font-size: 12px;
+  }
+  .hero {
+    padding: 55px 20px 65px;
+  }
+  .hero__title {
+    letter-spacing: -1.3px;
+  }
+  .steps__grid {
+    grid-template-columns: 1fr;
+  }
+  .hero__actions .btn {
+    width: auto;
+  }
+  .step-card {
+    padding: 25px;
+  }
+}
+.history__text {
+  max-width: 780px;
+}
+.history__text p {
+  text-transform: none;
+  text-indent: 0;
+  font:
+    400 16px/1.85 Arial,
+    sans-serif;
+  color: #5e6469;
+  letter-spacing: normal;
+}
+.history__text p + p {
+  margin-top: 22px;
+}
+.history__title {
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+.cta__actions {
+  display: flex;
+  justify-content: center;
+}
+.cta__actions .btn {
+  width: auto;
+}
+
+.brand-image,
+body:has(#options) header img {
+  width: 184px;
+  height: auto;
+  aspect-ratio: 10/3;
+  object-fit: contain;
+  object-position: center;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  border-radius: 0;
+}
+.site-footer .brand-image {
+  filter: none;
+  mix-blend-mode: normal;
+}
+.site-header__inner {
+  max-width: 1240px;
+  margin: auto;
+}
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+  text-align: left;
+  max-width: 1200px;
+  padding: 72px 30px 88px;
+  align-items: center;
+}
+.home-hero .hero__eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.home-hero .hero__title {
+  text-align: left;
+  font-size: clamp(42px, 5.3vw, 70px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -3px;
+  margin: 24px 0;
+}
+.home-hero .hero__title em {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: #5e646a;
+}
+.hero-description {
+  max-width: 420px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6e757b;
+}
+.home-hero .hero__actions {
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 18px;
+}
+.quiet-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555a60;
+}
+.hero-signature {
+  font-size: 11px;
+  color: #7d848c;
+  margin-top: 38px;
+}
+.moment-panel {
+  background: #dae7e5;
+  min-height: 510px;
+  border-radius: 100px 12px 12px 12px;
+  padding: 35px;
+  position: relative;
+  overflow: hidden;
+}
+.moment-top {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  font-size: 11px;
+  color: #575d62;
+}
+.moment-top > span + span {
+  font-size: 24px;
+}
+.ripple {
+  height: 200px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.ripple i {
+  position: absolute;
+  width: 210px;
+  height: 110px;
+  border: 1px solid #92989e;
+  border-radius: 50%;
+  transform: rotate(-25deg);
+}
+.ripple i:nth-child(2) {
+  width: 155px;
+  height: 155px;
+  border-color: #7f868d;
+  transform: rotate(30deg);
+}
+.ripple i:nth-child(3) {
+  width: 100px;
+  height: 165px;
+  border-color: #a1b9ac;
+  transform: rotate(55deg);
+}
+.moment-bottom > span {
+  font-size: 11px;
+  color: #656b71;
+}
+.moment-bottom h2 {
+  font:
+    400 36px/1.15 Georgia,
+    serif;
+  letter-spacing: -1px;
+  margin: 15px 0;
+  color: #363c41;
+}
+.moment-bottom p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #62686e;
+}
+.moment-bottom a {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #b6ccca;
+  padding-top: 18px;
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.care-section {
+  border-top: 1px solid #e1e3e4;
+}
+.care-section h2 {
+  letter-spacing: -1.5px;
+}
+.cta__card {
+  background: #e4eeed;
+  border-radius: 16px;
+  padding: 40px;
+  gap: 18px;
+  align-items: flex-start;
+  text-align: left;
+}
+.cta__title {
+  max-width: 700px;
+  font:
+    400 clamp(30px, 4vw, 48px)/1.15 Arial,
+    sans-serif;
+  color: #353a3f;
+  letter-spacing: -1.5px;
+}
+.cta__title span {
+  display: inline;
+}
+.cta__text {
+  color: #62686e;
+  max-width: 650px;
+  text-wrap: initial;
+  line-height: 1.8;
+}
+.cta__actions {
+  justify-content: flex-start;
+}
+.history {
+  background: #eff0f1;
+}
+.history__title {
+  color: #383d42;
+}
+.main-nav a:hover {
+  color: #3d4145;
+}
+.btn {
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.kicker {
+  letter-spacing: 1px;
+}
+.person:focus-within {
+  outline: 2px solid #71787f;
+  outline-offset: 3px;
+}
+@media (max-width: 760px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 40px 22px 55px;
+  }
+  .home-hero .hero__title {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+  .moment-panel {
+    min-height: 460px;
+    padding: 28px;
+  }
+  .moment-bottom h2 {
+    font-size: 32px;
+  }
+  .brand-image {
+    width: 155px;
+  }
+  .cta__card {
+    padding: 28px;
+  }
+  .cta__actions .btn {
+    max-width: 100%;
+  }
+}
+
+.steps .step-card__icon {
+  background: #f1f2f2;
+}
+.steps .step-card__icon svg {
+  stroke: url(#icon-rainbow);
+  stroke-width: 1.8;
+}
+html[data-theme="dark"] .steps .step-card__icon {
+  background: #33383c;
+}
